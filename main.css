@@ -10,6 +10,9 @@ nav {
 	margin: auto;
 	display: table;
 }
+ul {
+	list-style-type: none;
+}
 footer {
 	margin-top: 2em;
 	text-align: center;
