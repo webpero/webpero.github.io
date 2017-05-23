@@ -6,6 +6,10 @@ h1 {
 	font-size: 200%;
 	margin-top: 2em;
 }
+nav {
+	margin: auto;
+	display: table;
+}
 footer {
 	margin-top: 2em;
 	text-align: center;
@@ -15,7 +19,6 @@ footer a {
 	color: gray;
 	text-decoration: none;
 }
-
 .uthev {
 	font-family: "Courier New", "monospace", "sans-serif";
 	font-weight: 900;
