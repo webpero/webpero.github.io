@@ -1,17 +1,8 @@
-body, table {
-	font-family: "Verdana", "Arial", "sans-serif";
-	font-size: 0.9em;
+h1 {
+	text-align: center;
 }
-h1 { 
-	font-size: 200%;
-	margin-top: 2em;
-}
-nav {
-	margin: auto;
-	display: table;
-}
-ul {
-	list-style-type: none;
+.webpero-prefix {
+	vertical-align: -7px;
 }
 footer {
 	margin-top: 2em;
@@ -21,12 +12,4 @@ footer {
 footer a {
 	color: gray;
 	text-decoration: none;
-}
-.uthev {
-	font-family: "Courier New", "monospace", "sans-serif";
-	font-weight: 900;
-	font-size: 120%;	
-}
-.punktliste {
-	padding-left: 30px;
 }
