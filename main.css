@@ -1,17 +1,19 @@
-h1 {
-	text-align: center;
+.well h1 {
+	margin: 0;
 }
 h1 span.webpero-prefix {
 	vertical-align: -7px;
 }
-.well img {
-	margin-right: 20px;
-	height: 150px;
+.well {
+	margin-top: 10px;
+}
+header {
+	margin-bottom: 30px;
 }
 footer {
-	margin-top: 2em;
+	margin-top: 1em;
 	text-align: center;
-	font-size: 70%;
+	font-size: 80%;
 }
 footer a {
 	color: gray;
