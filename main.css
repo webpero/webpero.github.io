@@ -1,8 +1,12 @@
 h1 {
 	text-align: center;
 }
-h1 .webpero-prefix {
+h1 span.webpero-prefix {
 	vertical-align: -12px;
+}
+.well img {
+	margin-right: 20px;
+	height: 150px;
 }
 footer {
 	margin-top: 2em;
