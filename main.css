@@ -1,8 +1,8 @@
 h1 {
 	text-align: center;
 }
-.webpero-prefix {
-	vertical-align: -7px;
+h1 .webpero-prefix {
+	vertical-align: -12px;
 }
 footer {
 	margin-top: 2em;
