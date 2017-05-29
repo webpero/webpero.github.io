@@ -1,25 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="no">
 <head>
-	<title>the home of webpero</title>
-	<link rel="stylesheet"  href="http://stud.iie.ntnu.no/~peroma/main.css" />
+	<title>webpero</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> 
+	<!-- BOOTSTRAP: Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- BOOTSTRAP: Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Lokal CSS -->
+	<link rel="stylesheet" href="main.css">
+	<link rel="icon" type="image/png" href="favicon.ico">
 </head>
 
 <body>
-	<h1 style="text-align:center"><span style="vertical-align: -7px">web</span>pero</h1>
-	<div style="max-width:600px; margin:auto;">
-		<script>
-		  (function() {
-			var cx = '018034702328520342012:y80oci2ue2i';
-			var gcse = document.createElement('script');
-			gcse.type = 'text/javascript';
-			gcse.async = true;
-			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(gcse, s);
-		  })();
-		</script>
-		<gcse:search></gcse:search>
+
+	<div class="container">
+
+		<div class="jumbotron">
+		  <div class="container">
+			<h1><span class="webpero-prefix">web</span>pero</h1>
+			<p>Webutvikler med variert erfaring. Se min profil på:</p>
+			<p>
+				<a class="btn btn-default" href="https://www.linkedin.com/in/per-olav-mariussen/" target="_blank" role="button">LinkedIn&nbsp;&rquot;</span></a>
+			</p>
+		  </div>
+		</div>
+		
+		<div class="well">
+			<img class="img-responsive img-rounded pull-left" src="webpero.jpg" />
+			<p>
+				Jeg er en webutvikler på snart 49. Jeg har tidligere jobbet som systemutvikler, prosjektleder, avdelingsleder, og arkitekt, for å nevne noe...<br/>
+				De siste 10 årene har jeg jobbet som systemansvarlig på Storebrands intranett.<br/>
+				Jeg er nå klar for nye utfordringer!
+			</p>
+			<h3>Nøkkelkompetanse</h3>
+			<span class="badge">HTML5</span>
+		</div>
+		
+		<h2>Noen av mine prosjekter på Github</h2>
+		<ul class="list-group">
+			<li><a href="/jordskjelv/"><span class="badge">HTML5<span><span class="badge">jQuery</span><span class="badge">Google API</span>Jordskjelvrapportering</a></li>
+			<li><a href="/jespen/"><span class="badge">Webdesign</span><span class="badge">HTML5</span><span class="badge">Bootstrap</span>Jespen Popstjærne</a></li>
+		</ul>
 	</div>
-	<footer><a href="http://stud.iie.ntnu.no/~peroma/">&copy; 2017 webpero</a></footer>
+		
+	<footer><a href=".">&copy; 2017 webpero</a></footer>	
+	
+	<!-- JavaScript rammeverk: jQuery + Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>
