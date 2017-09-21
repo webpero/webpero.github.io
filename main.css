@@ -1,14 +1,18 @@
-.well h1 {
-	margin: 0;
+﻿/* CSS for webpero home page */
+/* 21.09.2017 Per Olav Mariussen */
+
+header {
+	margin-bottom: 20px;
+}
+#webpero {
+	height: 46px;
+	cursor: pointer;
 }
 h1 span.webpero-prefix {
 	vertical-align: -7px;
 }
-.well {
-	margin-top: 10px;
-}
-header {
-	margin-bottom: 30px;
+header > h1 {
+	margin-bottom: 0px;
 }
 footer {
 	margin-top: 1em;
@@ -18,4 +22,38 @@ footer {
 footer a {
 	color: gray;
 	text-decoration: none;
+}
+.padding-right {
+	padding-right: 30px;
+}
+.margin-bottom {
+	margin-bottom: 10px;
+}
+/* Sidepanel */
+#panel-profil, #panel-utdannelse, #panel-erfaring, #panel-prosjekter {
+	display: none;
+}
+.logo {
+	max-height: 32px;
+}
+/* Ekstra luft over seksjoner */
+div.panel-body .img-container, div.panel-body img.logo, div.panel-body div.panel, div.panel-body p, div.panel-body ul.list-group {
+	margin-top: 20px;
+}
+/* Mindre luft mellom overskrifter under utdannelse og erfaring */
+div#panel-utdannelse h3, div#panel-utdannelse h4, div#panel-utdannelse h5,
+div#panel-erfaring h3, div#panel-erfaring h4, div#panel-erfaring h5 {
+	margin-top: 5px;
+}
+/* Midtstill bilde når det er alene i en kolonne (mobil og små enheter)*/
+.img-container {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+	.img-container {
+		margin: unset;
+	}
 }
