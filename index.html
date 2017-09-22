@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<!-- Lokal CSS -->
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" id="theme" href="theme-org.css">
 	<link rel="icon" type="image/png" href="favicon.ico">
 </head>
 
@@ -18,20 +19,25 @@
 	<div class="container">
 
 		<header class="text-center">
-			<h1 id="webpero"><span class="webpero-prefix">web</span><span class="webpero-postfix">pero</span></h1>
-			<p>Webutvikler med variert erfaring</p>
+			<h1 id="webpero">
+				<span class="webpero-prefix">web</span><span class="webpero-postfix">pero</span>
+			</h1>
+			<h5>Webutvikler med variert erfaring</h5>
 		</header>
 
 		<div class="panel panel-default">
 		
 			<!-- Sidenavigasjon -->
 			<div class="panel-heading">
-				<ul class="nav nav-pills">
+				<ul id="navigasjon" class="nav nav-pills">
 					<li role="presentation" data-nav="panel-profil" class="active"><a href="#"><span class='glyphicon glyphicon-user' aria-hidden='true'></span>&nbsp;Profil</a></li>
 					<li role="presentation" data-nav="panel-utdannelse"><a href="#"><span class='glyphicon glyphicon-education' aria-hidden='true'></span>&nbsp;Utdannelse</a></li>
 					<li role="presentation" data-nav="panel-erfaring"><a href="#"><span class='glyphicon glyphicon-certificate' aria-hidden='true'></span>&nbsp;Erfaring</a></li>
 					<li role="presentation" data-nav="panel-prosjekter"><a href="#"><span class='glyphicon glyphicon-folder-open' aria-hidden='true'></span>&nbsp;&nbsp;Prosjekter</a></li>
-				</ul>
+					<li role="presentation" data-theme="blue" class="pull-right"><a href="#">Blå</a></li>
+					<li role="presentation" data-theme="dark" class="pull-right"><a href="#">Mørk</a></li>
+					<li role="presentation" data-theme="org" class="pull-right active"><a href="#">Lys</a></li>
+				</ul>			
 			</div>
 			
 			<!-- Hovedinnhold -->
@@ -83,15 +89,15 @@
 							<a class="btn btn-default margin-bottom" href="https://www.linkedin.com/in/per-olav-mariussen/" target="_blank" role="button" title="Per Olav Mariussen på Linkedin">
 								LinkedIn&nbsp;<img src="linkedin-128.png" style="height:28px" />
 							</a>
-							<a class="btn btn-default margin-bottom" href="CV-Per-Olav-Mariussen.pdf" target="_blank" role="button" title="CV Per Olav Mariussen">
+							<a class="btn btn-default margin-bottom" href="cv-per-olav-mariussen.pdf" target="_blank" role="button" title="CV Per Olav Mariussen">
 								CV (pdf)&nbsp;<img src="pdf-icon.png" style="height:28px" />
 							</a>
-						</p>				
+						</p>
 						<p class="text-center">
 							<a href="mailto:per.olav@mariussen.net"><span class='glyphicon glyphicon-envelope' aria-hidden='true'></span>&nbsp;&nbsp;per.olav@mariussen.net</a><br/>
-							<a href="tel:+4792416420"><span class='glyphicon glyphicon-phone' aria-hidden='true'></span>&nbsp;&nbsp;924 16 420</a>
+							<a href="tel:+4792416420"><span class='glyphicon glyphicon-phone' aria-hidden='true'></span>&nbsp;&nbsp;924 16 420</a><br/>
 						</p>				
-					</div>
+					</div>			
 				</div> <!-- #panel-profil -->
 				
 				<!-- 2: Utdannelse -->
@@ -266,15 +272,15 @@
 							<h2>Noen arbeider på Github</h2>
 							
 							<div class="list-group">
-								<a href="/jordskjelv/" target="_blank" title="webpero på Github: Jordskjelvrapportering" class="list-group-item" >
+								<a href="/jordskjelv/" title="webpero på Github: Jordskjelvrapportering" class="list-group-item" >
 									<span class="badge">HTML5</span><span class="badge">jQuery</span><span class="badge">Google API</span>
 									Jordskjelvrapportering (oppgave NTNU)
 								</a>
-								<a href="/jespen/" target="_blank" title="webpero på Github: Jespen Popstjærne" class="list-group-item">
+								<a href="/jespen/" title="webpero på Github: Jespen Popstjærne" class="list-group-item">
 									<span class="badge">Webdesign</span><span class="badge">HTML5</span><span class="badge">Bootstrap</span>
 									Jespen Popstjærne (prosjektoppgave NTNU)
 								</a>
-								<a  href="/analysiscodetest/" target="_blank" title="webpero på Github: Teknisk analyse aksjer" class="list-group-item">
+								<a  href="/analysiscodetest/" title="webpero på Github: Teknisk analyse aksjer" class="list-group-item">
 									<span class="badge">JavaScript</span>
 									Teknisk analyse aksjer
 								</a>
@@ -345,13 +351,13 @@
 	<script>
 		$(function(){
 			// Vis aktuell side i panel
-			$("#"+$(".nav.nav-pills li.active").data("nav")).show();
+			$("#"+$("#navigasjon li.active[data-nav]").data("nav")).show();
 		
 			// Init av side-navigasjon
-			$(".nav.nav-pills li").click( function() {
+			$("#navigasjon li[data-nav]").click( function() {
 				//Skjul elementet som aktiv navigasjon peker til (data-attributten "nav") og sett nav-elementet inaktivt
-				$("#"+$(".nav.nav-pills li.active").data("nav")).hide();
-				$(".nav.nav-pills li.active").removeClass("active");
+				$("#"+$("#navigasjon li.active[data-nav]").data("nav")).hide();
+				$("#navigasjon li.active[data-nav]").removeClass("active");
 				//Vis elementet som ny navigering peker til (data-attributten "nav") og sett nav-elementet aktivt
 				$(this).addClass("active");
 				$("#"+$(this).data("nav")).show();
@@ -368,6 +374,15 @@
 						);
 					}
 				);
+			});
+			
+			// Init klikk på temavelger
+			$("#navigasjon li[data-theme]").click(function() {
+				//Sett aktuelt valg aktivt
+				$("#navigasjon li.active[data-theme]").removeClass("active");
+				$(this).addClass("active");
+				//Bytt ut CSS for tema
+				$("head link#theme").attr( "href", "theme-"+$(this).data("theme")+".css" );
 			});
 		});
 	</script>
