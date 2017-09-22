@@ -1,0 +1,33 @@
+﻿/* Blue theme CSS for webpero home page */
+/* 22.09.2017 Per Olav Mariussen */
+
+body {
+	color: #222;
+	background: rgb(71,142,183);
+}
+h1, h2, h3,h4, h5 {
+	color: #fff;
+}
+.nav>li>a:hover {
+	color: #fff;
+	background-color: rgb(71,142,183);
+}
+.panel-heading h4 {
+	color: #333;
+}
+.panel-body {
+	background-color: rgb(51,122,183);
+}
+.panel-body .panel-body, .panel-body .list-group-item {
+	background: rgb(71,142,183);
+}
+/* Lenkefarge i tekst som ikke er på en knapp */
+.panel-body a:not(.btn) {
+	color: #fff;
+}
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    color: #333;
+}
+footer a {
+	color: #113c62;
+}

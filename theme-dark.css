@@ -1,0 +1,36 @@
+﻿/* Dark theme CSS for webpero home page */
+/* 22.09.2017 Per Olav Mariussen */
+
+body {
+	background: #e0e0e0;
+}
+.nav>li>a {
+	color: #fff;
+}
+.nav>li>a:hover {
+	background-color: #333;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #000;
+}
+.panel-body {
+	background: #d0d0d0;
+}
+.panel-body .panel-body, .panel-body .list-group-item {
+	border-color: #777;
+	background: #e0e0e0;
+}
+.panel-default > .panel-heading {
+    color: #fff;
+    background-color: #777;
+    border-color: #ddd;	
+	background-image: -webkit-linear-gradient(top,#777 0,#333 100%);
+    background-image: -o-linear-gradient(top,#777 0,#333 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#777),to(#333));
+    background-image: linear-gradient(to bottom,#777 0,#333 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#777', endColorstr='#333', GradientType=0);
+    background-repeat: repeat-x;
+}
+footer a {
+	color: black;
+}
