@@ -28,6 +28,10 @@ footer a {
 .margin-bottom {
 	margin-bottom: 10px;
 }
+/* Bold i navigasjon for å gi bedre kontrast og lesbarhet (UU) */
+.nav-pills>li>a {
+    font-weight: 700;
+}
 /* Sidepanel */
 #panel-profil, #panel-utdannelse, #panel-erfaring, #panel-prosjekter {
 	display: none;
