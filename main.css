@@ -17,10 +17,9 @@ header > h1 {
 footer {
 	margin-top: 1em;
 	text-align: center;
-	font-size: 80%;
 }
 footer a {
-	color: gray;
+	color: #333;
 	text-decoration: none;
 }
 .padding-right {
