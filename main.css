@@ -30,7 +30,7 @@ footer a {
 }
 /* Overstyring av Bootstrap for bedre kontrast og lesbarhet (UU) */
 .nav-pills>li>a {
-    color: #5c8bb4;
+    color: #4b7aa3;
     font-weight: 700;
 }
 .badge {
