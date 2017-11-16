@@ -28,9 +28,13 @@ footer a {
 .margin-bottom {
 	margin-bottom: 10px;
 }
-/* Bold i navigasjon for å gi bedre kontrast og lesbarhet (UU) */
+/* Overstyring av Bootstrap for bedre kontrast og lesbarhet (UU) */
 .nav-pills>li>a {
+    color: #5c8bb4;
     font-weight: 700;
+}
+.badge {
+    background-color: #666
 }
 /* Sidepanel */
 #panel-profil, #panel-utdannelse, #panel-erfaring, #panel-prosjekter {
