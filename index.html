@@ -27,11 +27,26 @@
 
 	<div class="container">
 
-		<header class="text-center">
-			<h1 id="webpero">
-				<span class="webpero-prefix">web</span><span class="webpero-postfix">pero</span>
-			</h1>
-			<h5>Webutvikler med variert erfaring</h5>
+		<header>
+			<div class="row">
+				<div class="col-sm-offset-2 col-sm-8 col-xs-12 text-center">
+					<h1 id="webpero">
+						<span class="webpero-prefix">web</span><span class="webpero-postfix">pero</span>
+					</h1>
+					<h5>Webutvikler med variert erfaring</h5>
+				</div>
+				<div class="col-sm-2 col-xs-12 text-center">
+					<div id="choose-theme" class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Velg visning <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li data-theme="org" class="active"><a href="#">Lys</a></li>
+							<li data-theme="dark"><a href="#">Mørk</a></li>
+						</ul>
+					</div>				
+				</div>
+			</div>
 		</header>
 
 		<div class="panel panel-default">
@@ -43,9 +58,6 @@
 					<li role="presentation" data-nav="panel-utdannelse"><a href="#"><span class='glyphicon glyphicon-education' aria-hidden='true'></span>&nbsp;Utdannelse</a></li>
 					<li role="presentation" data-nav="panel-erfaring"><a href="#"><span class='glyphicon glyphicon-certificate' aria-hidden='true'></span>&nbsp;Erfaring</a></li>
 					<li role="presentation" data-nav="panel-prosjekter"><a href="#"><span class='glyphicon glyphicon-folder-open' aria-hidden='true'></span>&nbsp;&nbsp;Prosjekter</a></li>
-					<li role="presentation" data-theme="blue" class="pull-right"><a href="#">Blå</a></li>
-					<li role="presentation" data-theme="dark" class="pull-right"><a href="#">Mørk</a></li>
-					<li role="presentation" data-theme="org" class="pull-right active"><a href="#">Lys</a></li>
 				</ul>			
 			</div>
 			
@@ -295,21 +307,25 @@
 									<span class="badge">HTML5</span><span class="badge">jQuery</span><span class="badge">Google MAP</span>
 									Jordskjelvrapportering (oppgave NTNU)
 								</a>
-								<a  href="/analysiscodetest/" target="_blank" title="webpero på Github: Teknisk analyse aksjer" class="list-group-item">
-									<span class="badge">JavaScript</span>
-									Teknisk analyse aksjer
-								</a>
 								<a  href="https://parkering.herokuapp.com/" target="_blank" title="webpero på Heroku: Parkering" class="list-group-item">
 									<span class="badge">HTML5</span><span class="badge">JavaScript</span><span class="badge">EventSource</span><span class="badge">Levende grafikk</span>
 									Parkering (oppgave NTNU)
 								</a>
+								<a  href="/analysiscodetest/" target="_blank" title="webpero på Github: Teknisk analyse aksjer" class="list-group-item">
+									<span class="badge">JavaScript</span>
+									Teknisk analyse aksjer
+								</a>
 								<a href="/google-api-vol1/" target="_blank" title="webpero på Github: Bildesøk via Google Custom Search" class="list-group-item" >
 									<span class="badge">MVC</span><span class="badge">JavaScript</span><span class="badge">Google CSE API</span>
-									Bildesøk via Google Custom Search (v2.0)
+									Bildesøk via Google Custom Search
 								</a>
 								<a  href="https://webpero-getaway.herokuapp.com/" target="_blank" title="webpero på Heroku: getaway - Ferieplanlegging" class="list-group-item">
-									<span class="badge">Google Maps API</span><span class="badge">Google CSE API</span><span class="badge">React</span>
-									getaway - Ferieplanlegging (v0.9)
+									<span class="badge">Google Maps API</span><span class="badge">Google CSE API</span><span class="badge">JavaScript</span><span class="badge">React</span>
+									getaway - Ferieplanlegging
+								</a>
+								<a  href="https://nav-21.herokuapp.com/" target="_blank" title="webpero på Heroku: Spill 21 med Magnus" class="list-group-item">
+									<span class="badge">JavaScript</span><span class="badge">React</span>
+									Spill 21 med Magnus
 								</a>
 							</div>
 						</div>
@@ -376,7 +392,17 @@
 
 	<!-- Lokalt JavaScript: Init av siden, Google Analytics -->
 	<script>
-		$(function(){
+		$(function()
+		{
+			// Init klikk på temavelger
+			$("#choose-theme li[data-theme]").click(function() {
+				//Sett aktuelt valg aktivt
+				$("#choose-theme li.active[data-theme]").removeClass("active");
+				$(this).addClass("active");
+				//Bytt ut CSS for tema
+				$("head link#theme").attr( "href", "theme-"+$(this).data("theme")+".css" );
+			});
+
 			// Vis aktuell side i panel
 			$("#"+$("#navigasjon li.active[data-nav]").data("nav")).show();
 		
@@ -401,16 +427,7 @@
 						);
 					}
 				);
-			});
-			
-			// Init klikk på temavelger
-			$("#navigasjon li[data-theme]").click(function() {
-				//Sett aktuelt valg aktivt
-				$("#navigasjon li.active[data-theme]").removeClass("active");
-				$(this).addClass("active");
-				//Bytt ut CSS for tema
-				$("head link#theme").attr( "href", "theme-"+$(this).data("theme")+".css" );
-			});
+			});			
 		});
 	</script>
 	
